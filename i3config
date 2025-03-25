@@ -193,6 +193,9 @@ bar {
 }
 
 
+###screen shot
+bindsym Print exec flameshot gui
+
 
 bindsym Mod1+space exec dmenu_run
 inxeoz@debian:~$ 
