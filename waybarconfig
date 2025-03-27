@@ -1,0 +1,63 @@
+[inxeoz@archlinux waybar]$ cat config 
+{
+    "layer": "top",
+    "position": "bottom",    // Bottom position, i3-like
+    "height": 24,            // Slim height, i3-like
+    "modules-left": ["hyprland/workspaces"],
+    "modules-center": ["hyprland/window"],
+    "modules-right": ["pulseaudio", "backlight", "network", "bluetooth", "clock"],
+    "hyprland/workspaces": {
+        "format": "{id}",    // Simple workspace numbers
+        "persistent-workspaces": {
+            "*": 10          // Show 10 workspaces
+        }
+    },
+    "hyprland/window": {
+        "max-length": 50     // Limit window title length
+    },
+    "pulseaudio": {
+        "format": "{volume}%",    // Volume percentage
+        "format-muted": "Muted",  // Text w[inxeoz@archlinux waybar]$ cat config 
+{
+    "layer": "top",
+    "position": "bottom",    // Bottom position, i3-like
+    "height": 24,            // Slim height, i3-like
+    "modules-left": ["hyprland/workspaces"],
+    "modules-center": ["hyprland/window"],
+    "modules-right": ["pulseaudio", "backlight", "network", "bluetooth", "clock"],
+    "hyprland/workspaces": {
+        "format": "{id}",    // Simple workspace numbers
+        "persistent-workspaces": {
+            "*": 10          // Show 10 workspaces
+        }
+    },
+    "hyprland/window": {
+        "max-length": 50     // Limit window title length
+    },
+    "pulseaudio": {
+        "format": "{volume}%",    // Volume percentage
+        "format-muted": "Muted",  // Text when muted
+        "scroll-step": 5,         // Adjust volume by 5% on scroll
+        "on-click": "pavucontrol" // Open PulseAudio control on click
+    },
+    "backlight": {
+        "format": "{percent}%",   // Brightness percentage
+        "on-scroll-up": "brightnessctl set +5%",   // Increase by 5%
+        "on-scroll-down": "brightnessctl set 5%-"  // Decrease by 5%
+    },
+    "network": {
+        "format-wifi": "{essid}",    // Show Wi-Fi network name
+        "format-disconnected": "Off", // Text when disconnected
+        "on-click": "nm-applet"      // Open NetworkManager applet
+    },
+    "bluetooth": {
+        "format": "BT Off",          // Default when off
+        "format-on": "BT On",        // Bluetooth enabled, no devices
+        "format-connected": "BT {num_connections}", // Number of connected devices
+        "on-click": "blueman-manager" // Open Bluetooth manager
+    },
+    "clock": {
+        "format": "{:%H:%M}"         // 24-hour clock
+    }
+}
+[inxeoz@archlinux waybar]$ 
