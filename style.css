@@ -1,0 +1,56 @@
+* {
+    font-family: monospace;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+}
+
+#waybar {
+    background-color: #1a1a1a; /* Dark gray background */
+    color: #ffffff;           /* White text */
+    min-height: 24px;         /* Matches config height */
+}
+
+#workspaces button {
+    padding: 0 5px;           /* Padding within workspace buttons */
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+#workspaces button.focused {
+    background-color: #333333; /* Darker gray for active workspace */
+    color: #ffffff;
+}
+
+#window, #pulseaudio, #backlight, #network, #bluetooth, #clock {
+    padding: 0 5px;          /* Increased padding for more space inside each module */
+    margin-right: 5px;        /* Adds 5px gap between modules */
+}
+
+#window {
+    padding: 0 15px;          /* Consistent padding for window title */
+    margin-right: 0;          /* No extra margin here to keep it centered */
+}
+
+#pulseaudio.muted {
+    color: #888888;           /* Gray out muted volume */
+}
+
+#network.disconnected {
+    color: #888888;           /* Gray out disconnected Wi-Fi */
+}
+
+#bluetooth {
+    color: #ffffff;           /* White when on/connected */
+}
+
+#bluetooth.disabled {
+    color: #888888;           /* Gray when off */
+}
+
+/* Ensure the last module (clock) doesn’t have extra margin on the right */
+#clock {
+    margin-right: 0;
+}
