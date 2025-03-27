@@ -24,7 +24,7 @@
     color: #ffffff;
 }
 
-#window, #pulseaudio, #backlight, #network, #bluetooth, #clock {
+#window, #pulseaudio, #backlight, #network, #bluetooth,#battery,  #clock {
     padding: 0 5px;          /* Increased padding for more space inside each module */
     margin-right: 5px;        /* Adds 5px gap between modules */
 }

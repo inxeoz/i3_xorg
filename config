@@ -4,7 +4,7 @@
     "height": 24,            // Slim height, i3-like
     "modules-left": ["hyprland/workspaces"],
     "modules-center": ["hyprland/window"],
-    "modules-right": ["pulseaudio", "backlight", "network", "bluetooth", "clock"],
+    "modules-right": ["pulseaudio", "backlight", "network", "bluetooth", "battery",  "clock"],
     "hyprland/workspaces": {
         "format": "{id}",    // Simple workspace numbers
         "persistent-workspaces": {
@@ -28,6 +28,7 @@
     "network": {
         "format-wifi": "{essid}",    // Show Wi-Fi network name
         "format-disconnected": "Off", // Text when disconnecte
+	"on-click" : "kitty nmtui-connect"
     },
     "bluetooth": {
         "format": "BT Off",          // Default when off
@@ -35,7 +36,16 @@
         "format-connected": "BT {num_connections}", // Number of connected devices
         "on-click": "blueman-manager" // Open Bluetooth manager
     },
+   "battery": {
+    "format": "{capacity}% {icon}",
+    "format-charging": "{capacity}% 󰂄",
+    "format-plugged": "{capacity}% 󰂄",
+    "format-alt": "{time} {icon}",
+    "format-alt-click": "xdg-open https://wiki.archlinux.org/index.php/UPower#ACPI_events",
+    "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+  },
     "clock": {
-        "format": "{:%I:%M %p}"         // 24-hour clock
-    }
+        "format": "{:%I:%M %p}",         // 24-hour clock
+   	"on-click": "kitty calcurse"
+	 }
 }
