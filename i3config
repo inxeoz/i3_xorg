@@ -5,6 +5,7 @@ exec --no-startup-id bash -c "feh --bg-scale \"$(find ~/Wallpaper -type f -print
 exec --no-startup-id picom --config ~/.config/picom.conf &
 ########################
 
+
 # Programs
 bindsym $mod+c kill
 
@@ -207,6 +208,7 @@ bindsym $mod+r mode "resize"
 
 ###screen shot
 bindsym Print exec flameshot gui
+bindsym $mod + Print exec import png:- | xclip -selection clipboard -t image/png
 
 
 bindsym Mod1+space exec rofi -show drun
