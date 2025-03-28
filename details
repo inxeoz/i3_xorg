@@ -4,3 +4,12 @@ sudo pacman -S mtpfs gvfs-mtp #connect android
 
 ###blocked functionality
 rfkill list
+
+systemctl --user restart pulseaudio   # Restart PulseAudio
+systemctl --user restart wireplumber  # Restart WirePlumber (for PipeWire)
+sudo systemctl restart bluetooth      # Restart Bluetooth service
+
+
+pactl list sinks | grep -E 'Name:|Description:'
+pactl list cards | grep -i "bluez"
+pactl load-module module-bluetooth-discover
