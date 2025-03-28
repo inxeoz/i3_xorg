@@ -4,7 +4,7 @@ bindsym $mod+c kill
 set $terminal kitty
 exec --no-startup-id polybar
 
-gaps inner 5px
+#gaps inner 5px
 new_window pixel 5
 for_window [class=".*"] border pixel 5
 
