@@ -1,3 +1,6 @@
 aplay -l  #firmware check
 
 sudo pacman -S mtpfs gvfs-mtp #connect android
+
+###blocked functionality
+rfkill list
