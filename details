@@ -5,6 +5,10 @@ sudo pacman -S mtpfs gvfs-mtp #connect android
 ###blocked functionality
 rfkill list
 
+#thunar terminal open from thunar
+kitty --working-directory %f
+
+
 systemctl --user restart pulseaudio   # Restart PulseAudio
 systemctl --user restart wireplumber  # Restart WirePlumber (for PipeWire)
 sudo systemctl restart bluetooth      # Restart Bluetooth service
