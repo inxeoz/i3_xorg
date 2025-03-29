@@ -208,9 +208,6 @@ bindsym $mod+r mode "resize"
 
 ###screen shot
 bindsym Print exec flameshot gui
-
-####sudo pacman -S imagemagick
-######
 bindsym $mod + Print exec import png:- | xclip -selection clipboard -t image/png
 
 
