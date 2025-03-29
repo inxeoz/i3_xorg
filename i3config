@@ -2,7 +2,7 @@
 exec --no-startup-id bash -c "feh --bg-scale \"$(find ~/Wallpaper -type f -print0 | shuf -z -n 1 | xargs -0)\""
 #########################
 #kitty opacity
-exec --no-startup-id picom --config ~/.config/picom.conf &
+exec --no-startup-id picom &
 ########################
 
 
